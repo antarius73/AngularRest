@@ -13,7 +13,7 @@ angular.module('anguarRestApp')
   .controller('GetmultipleCtrl', function ($scope, $http) {
     $http.get('http://jsonplaceholder.typicode.com/photos').
     success(function(data){
-      $scope.images =data;
+      $scope.images =data.slice(0,500);
     });
 
   });
