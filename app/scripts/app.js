@@ -13,7 +13,9 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'datatables'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
