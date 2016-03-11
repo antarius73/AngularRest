@@ -11,9 +11,9 @@
 
 angular.module('anguarRestApp')
   .controller('GetmultipleCtrl', function ($scope, $http) {
-    $http.get('https://api.github.com/users/hadley/orgs').
+    $http.get('http://jsonplaceholder.typicode.com/photos').
     success(function(data){
-      $scope.githubUsers =data;
+      $scope.images =data;
     });
 
   });
