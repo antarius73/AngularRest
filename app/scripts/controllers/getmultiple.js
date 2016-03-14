@@ -20,9 +20,9 @@ angular.module('anguarRestApp')
 
     $scope.dtColumnDefs = [
       DTColumnDefBuilder.newColumnDef(0),
-      DTColumnDefBuilder.newColumnDef(1),
-      DTColumnDefBuilder.newColumnDef(2).notSortable(),
-      DTColumnDefBuilder.newColumnDef(3).notVisible()
+      DTColumnDefBuilder.newColumnDef(1).notSortable(),
+      DTColumnDefBuilder.newColumnDef(2).notVisible(),
+      DTColumnDefBuilder.newColumnDef(3)
    ];
     // fixe la langue de la grille à la volé
     $scope.dtOptions.withLanguageSource('//cdn.datatables.net/plug-ins/1.10.11/i18n/English.json');
