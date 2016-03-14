@@ -17,6 +17,7 @@ angular
     'datatables'
 
   ])
+  .run(dtLanguageConfig)
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -43,3 +44,7 @@ angular
         redirectTo: '/'
       });
   });
+
+function dtLanguageConfig(DTDefaultOptions) {
+  DTDefaultOptions.setLanguageSource("//cdn.datatables.net/plug-ins/1.10.11/i18n/French.json");
+}
