@@ -1,5 +1,9 @@
 {
   "id": "identifiant",
   "title": "titre",
+  "adress": "adresse",
+  "image": "image",
+  "imagesList": "Liste d'image",
+  "multiGetTitle":"Recherche de données nombreuses sur un Rest publique.",
   "directives.language-select.Language": "Langage"
 }

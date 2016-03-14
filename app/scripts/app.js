@@ -68,6 +68,7 @@ angular
       });
   });
 
-function dtLanguageConfig(DTDefaultOptions) {
-  DTDefaultOptions.setLanguageSource("//cdn.datatables.net/plug-ins/1.10.11/i18n/French.json");
+function dtLanguageConfig(DTDefaultOptions,$rootScope) {
+  $rootScope.Userlanguage = "fr_FR";
+  DTDefaultOptions.setLanguageSource("resources/datatable-fr_FR.json");
 }

@@ -1,5 +1,9 @@
 {
   "id": "identifier",
   "title": "title",
+  "adress": "adress",
+  "image": "image",
+  "imagesList": "Image list",
+  "multiGetTitle":"Get several data on a public Rest",
   "directives.language-select.Language": "Language"
 }

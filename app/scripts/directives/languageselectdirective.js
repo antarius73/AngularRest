@@ -7,7 +7,7 @@
  * # languageSelectDirective
  */
 angular.module('anguarRestApp')
-  .directive('languageSelectDirective', function (LocaleService) {
+  .directive('languageSelectDirective', function (LocaleService,$rootScope, LOCALES) {
     'use strict';
 
     return {
@@ -32,6 +32,13 @@ angular.module('anguarRestApp')
 
         $scope.changeLanguage = function (locale) {
           LocaleService.setLocaleByDisplayName(locale);
+
+          angular.forEach(LOCALES.locales, function(key, value) {
+            if (key == locale) {
+              $rootScope.Userlanguage= value;
+            }
+          });
+
         };
       }
     };

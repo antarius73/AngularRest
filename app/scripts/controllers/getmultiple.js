@@ -10,7 +10,7 @@
 
 
 angular.module('anguarRestApp')
-  .controller('GetmultipleCtrl', function ($resource, $scope, $http, DTOptionsBuilder, DTColumnDefBuilder) {
+  .controller('GetmultipleCtrl', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder,$rootScope) {
 
     $scope.images=[];
 
@@ -25,7 +25,7 @@ angular.module('anguarRestApp')
       DTColumnDefBuilder.newColumnDef(3)
    ];
     // fixe la langue de la grille à la volé
-    $scope.dtOptions.withLanguageSource('//cdn.datatables.net/plug-ins/1.10.11/i18n/English.json');
+    $scope.dtOptions.withLanguageSource('resources/datatable-'+$rootScope.Userlanguage+'.json');
     $resource('http://jsonplaceholder.typicode.com/photos').query().$promise.then(function(images) {
       $scope.images = images.slice(0,200);
     });
