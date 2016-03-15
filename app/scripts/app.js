@@ -63,6 +63,11 @@ angular
         controller: 'GetmultipleCtrl',
         controllerAs: 'getmultiple'
       })
+      .when('/userConfig', {
+        templateUrl: 'views/userconfig.html',
+        controller: 'UserconfigCtrl',
+        controllerAs: 'userConfig'
+      })
       .otherwise({
         redirectTo: '/'
       });

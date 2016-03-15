@@ -5,5 +5,15 @@
   "image": "image",
   "imagesList": "Image list",
   "multiGetTitle":"Get several data on a public Rest",
-  "directives.language-select.Language": "Language"
+  "directives.language-select.Language": "Language",
+  "ConfigPanTitle":"Setting panel",
+  "appTargetText":"The goal is to test Rest access for Get Put Post and Del with credential and i18n support",
+  "appTitle":"Rest Angular App",
+  "getSimpleText":"Do a mono-element Get on a pbulic Rest",
+  "home": "home",
+  "getSimple": "get simple Rest",
+  "getMulti": "get multi-element Rest",
+  "Settings": "settings",
+  "tesfriRD":"Tesfri R&D",
+  "content":"contant"
 }

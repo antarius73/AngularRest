@@ -41,9 +41,10 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/getsimple">Get simple</a></li>
-              <li><a ng-href="#/getmultiple">Get multiple</a></li>
+              <li class="active"><a href="#/">{{"home"|translate}}</a></li>
+              <li><a ng-href="#/getsimple">{{"getSimple"|translate}}</a></li>
+              <li><a ng-href="#/getmultiple">{{"getMulti"|translate}}</a></li>
+              <li><a ng-href="#/userConfig">{{"Settings"|translate}}</a></li>
             </ul>
           </div>
         </div>
@@ -51,13 +52,14 @@
     </div>
 
     <div class="container">
-      <div language-select-directive></div>
+      <!-- necessaire pour init -->
+      <div language-select-directive  style="visibility: hidden"></div>
     <div ng-view=""></div>
     </div>
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><span class="glyphicon glyphicon-book"></span> {{"tesfriRD"|translate}}</p>
       </div>
     </div>
 
@@ -112,6 +114,7 @@
         <script src="scripts/controllers/getmultiple.js"></script>
         <script src="scripts/services/localeservice.js"></script>
         <script src="scripts/directives/languageselectdirective.js"></script>
+        <script src="scripts/controllers/userconfig.js"></script>
         <!-- endbuild -->
 </body>
 </html>

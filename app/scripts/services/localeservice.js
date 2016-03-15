@@ -53,6 +53,7 @@ angular.module('anguarRestApp')
 
     return {
       getLocaleDisplayName: function () {
+
         return localesObj[currentLocale];
       },
       setLocaleByDisplayName: function (localeDisplayName) {

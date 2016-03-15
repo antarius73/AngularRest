@@ -3,7 +3,17 @@
   "title": "titre",
   "adress": "adresse",
   "image": "image",
-  "imagesList": "Liste d'image",
+  "imagesList": "liste d'image",
   "multiGetTitle":"Recherche de données nombreuses sur un Rest publique.",
-  "directives.language-select.Language": "Langage"
+  "directives.language-select.Language": "Langage",
+  "ConfigPanTitle":"Panneau de configuration",
+  "appTargetText":"L'objectif est de tester l'acces Rest en Get Put Post Del avec l'authentification Rest. et le support i18n",
+  "appTitle":"App. Rest Angular",
+  "getSimpleText":"Faire un Get mono-enregistrement vers un Rest publique.",
+  "home": "acceuil",
+  "getSimple": "get simple Rest",
+  "getMulti": "get multi-element Rest",
+  "Settings": "paramètrage",
+  "tesfriRD":"Tesfri R&D",
+  "content":"contenue"
 }
