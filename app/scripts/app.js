@@ -68,6 +68,11 @@ angular
         controller: 'UserconfigCtrl',
         controllerAs: 'userConfig'
       })
+      .when('/crudWcf', {
+        templateUrl: 'views/crudwcf.html',
+        controller: 'CrudwcfCtrl',
+        controllerAs: 'crudWcf'
+      })
       .otherwise({
         redirectTo: '/'
       });
