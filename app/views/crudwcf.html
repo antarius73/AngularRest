@@ -4,10 +4,11 @@
   <h2>{{"employeesList"|translate}}</h2>
   <thead>
   <tr>
-    <th>{{"id"|translate}}</th>
-    <th>{{"name"|translate}}</th>
-    <th>{{"lastName"|translate}}</th>
-    <th>{{"lastDateModif"|translate}}</th>
+    <th class="col-md-2">{{"id"|translate}}</th>
+    <th class="col-md-2">{{"name"|translate}}</th>
+    <th class="col-md-3">{{"lastName"|translate}}</th>
+    <th class="col-md-2">{{"lastDateModif"|translate}}</th>
+    <th class="col-md-3">{{"action"|translate}}</th>
   </tr>
   </thead>
   <tbody>
@@ -17,6 +18,18 @@
     <td>{{employee.Title}}&nbsp;{{employee.FirstName}}</td>
     <td>{{employee.LastName}}</td>
     <td>{{employee.LastDateModif|date:"MM/dd/yyyy"}}</td>
+    <td>
+      <a class="btn btn-info" href="/#/crudWcf/{{employee.BusinessEntityId}}">
+        <i class="glyphicon glyphicon-eye-open"></i>
+      </a>&nbsp;
+      <a class="btn btn-warning" href="crud">
+        <i class="glyphicon glyphicon-pencil"></i>
+      </a>&nbsp;
+      <a class="btn btn-danger">
+         <i class="glyphicon glyphicon-trash"></i>
+      </a>
+
+    </td>
      </tr>
   </tbody>
 </table>

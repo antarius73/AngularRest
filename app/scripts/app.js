@@ -73,6 +73,11 @@ angular
         controller: 'CrudwcfCtrl',
         controllerAs: 'crudWcf'
       })
+      .when('/crudWcf/:employeeId', {
+        templateUrl: 'views/employeeDetail.html',
+        controller: 'EmployeedetailCtrl',
+        controllerAs: 'employeeDetail'
+      })
       .otherwise({
         redirectTo: '/'
       });
