@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83fbdbf1-9565-47de-92b0-663a352e39df" name="Default" comment="Passage sous le nouveau rest avec ;&#10; - Reonommage de EMployee en Person&#10; - Modification des adresses REST sur la nouvelle écriture&#10; - Promise sur toutes les requêtes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/personservice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/person.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/person.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/persons.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/services/personservice.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/controllers/employeedetail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/services/employeeservice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/employeeDetail.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/scripts/controllers/crudwcf.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/persons.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/crudwcf.html" afterPath="$PROJECT_DIR$/app/views/persons.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/resources/locale-en_US.json" afterPath="$PROJECT_DIR$/app/resources/locale-en_US.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/resources/locale-fr_FR.json" afterPath="$PROJECT_DIR$/app/resources/locale-fr_FR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/about.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/about.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/getmultiple.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/getmultiple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/getsimple.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/getsimple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/userconfig.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/userconfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/directives/languageselectdirective.js" afterPath="$PROJECT_DIR$/app/scripts/directives/languageselectdirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/localeservice.js" afterPath="$PROJECT_DIR$/app/scripts/services/localeservice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/getmultiple.html" afterPath="$PROJECT_DIR$/app/views/getmultiple.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/about.js" afterPath="$PROJECT_DIR$/test/spec/controllers/about.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/getmultiple.js" afterPath="$PROJECT_DIR$/test/spec/controllers/getmultiple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/getsimple.js" afterPath="$PROJECT_DIR$/test/spec/controllers/getsimple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/main.js" afterPath="$PROJECT_DIR$/test/spec/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/userconfig.js" afterPath="$PROJECT_DIR$/test/spec/controllers/userconfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/directives/languageselectdirective.js" afterPath="$PROJECT_DIR$/test/spec/directives/languageselectdirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/services/localeservice.js" afterPath="$PROJECT_DIR$/test/spec/services/localeservice.js" />
     </list>
     <ignored path="AnguarRest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -547,7 +516,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458230461323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Passage sous le nouveau rest avec ;&#10; - Reonommage de EMployee en Person&#10; - Modification des adresses REST sur la nouvelle écriture&#10; - Promise sur toutes les requêtes">
+      <created>1458230485869</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1458230485869</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
