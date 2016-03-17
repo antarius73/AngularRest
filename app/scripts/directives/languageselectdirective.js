@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name anguarRestApp.directive:languageSelectDirective
+ * @name angularRestApp.directive:languageSelectDirective
  * @description
  * # languageSelectDirective
  */
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .directive('languageSelectDirective', function (LocaleService,$rootScope, LOCALES) {
     'use strict';
 

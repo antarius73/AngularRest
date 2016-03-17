@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name anguarRestApp.controller:MainCtrl
+ * @name angularRestApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the anguarRestApp
+ * Controller of the angularRestApp
  */
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .controller('MainCtrl', function ($scope, $http) {
 
 

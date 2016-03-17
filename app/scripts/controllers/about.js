@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name anguarRestApp.controller:AboutCtrl
+ * @name angularRestApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the anguarRestApp
+ * Controller of the angularRestApp
  */
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

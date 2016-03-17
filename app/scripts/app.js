@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name anguarRestApp
+ * @name angularRestApp
  * @description
- * # anguarRestApp
+ * # angularRestApp
  *
  * Main module of the application.
  */
 angular
-  .module('anguarRestApp', [
+  .module('angularRestApp', [
     'ngCookies',
     'ngResource',
     'ngRoute',
@@ -26,6 +26,10 @@ angular
     },
     'preferredLocale': 'fr_FR'
   })
+  .config(['$resourceProvider', function ($resourceProvider) {
+    // Don't strip trailing slashes from calculated URLs
+    $resourceProvider.defaults.stripTrailingSlashes = false;
+  }])
   .config(function ($translateProvider) {
     $translateProvider.useMissingTranslationHandlerLog();
   })
@@ -68,15 +72,15 @@ angular
         controller: 'UserconfigCtrl',
         controllerAs: 'userConfig'
       })
-      .when('/crudWcf', {
-        templateUrl: 'views/crudwcf.html',
-        controller: 'CrudwcfCtrl',
-        controllerAs: 'crudWcf'
+      .when('/persons', {
+        templateUrl: 'views/persons.html',
+        controller: 'PersonsController',
+        controllerAs: 'persons'
       })
-      .when('/crudWcf/:employeeId', {
-        templateUrl: 'views/employeeDetail.html',
-        controller: 'EmployeedetailCtrl',
-        controllerAs: 'employeeDetail'
+      .when('/person/:id', {
+        templateUrl: 'views/person.html',
+        controller: 'PersonController',
+        controllerAs: 'person'
       })
       .otherwise({
         redirectTo: '/'

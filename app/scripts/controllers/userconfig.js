@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name anguarRestApp.controller:UserconfigCtrl
+ * @name angularRestApp.controller:UserconfigCtrl
  * @description
  * # UserconfigCtrl
- * Controller of the anguarRestApp
+ * Controller of the angularRestApp
  */
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .controller('UserconfigCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

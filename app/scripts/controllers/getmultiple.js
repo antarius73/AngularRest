@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name anguarRestApp.controller:GetmultipleCtrl
+ * @name angularRestApp.controller:GetmultipleCtrl
  * @description
  * # GetmultipleCtrl
- * Controller of the anguarRestApp
+ * Controller of the angularRestApp
  */
 
 
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .controller('GetmultipleCtrl', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder,$rootScope) {
 
     $scope.images=[];

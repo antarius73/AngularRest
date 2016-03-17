@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name anguarRestApp.controller:GetsimpleCtrl
+ * @name angularRestApp.controller:GetsimpleCtrl
  * @description
  * # GetsimpleCtrl
- * Controller of the anguarRestApp
+ * Controller of the angularRestApp
  */
 
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .controller('GetsimpleCtrl', function ($scope, $http) {
     $http.get('http://rest-service.guides.spring.io/greeting').
     success(function(data){

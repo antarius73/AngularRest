@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name anguarRestApp.controller:CrudwcfCtrl
+ * @name angularRestApp.controller:PersonsController
  * @description
- * # CrudwcfCtrl
- * Controller of the anguarRestApp
+ * # CrudWcfController
+ * Controller of the angularRestApp
  */
-angular.module('anguarRestApp')
-  .controller('CrudwcfCtrl', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder,$rootScope,AllEmployees) {
+angular.module('angularRestApp')
+  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons) {
 
-    $scope.employees=[];
+    $scope.persons = [];
 
     $scope.dtOptions = DTOptionsBuilder.newOptions();
 
@@ -24,8 +24,8 @@ angular.module('anguarRestApp')
     // fixe la langue de la grille à la volé
     $scope.dtOptions.withLanguageSource('resources/datatable-'+$rootScope.Userlanguage+'.json');
 
-    $scope.employees = AllEmployees.query().$promise.then(function(employees) {
-        $scope.employees = employees.slice(0,200);
+    Persons.query().$promise.then(function (persons) {
+      $scope.persons = persons.slice(0, 200);
     });
 
 

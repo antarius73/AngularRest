@@ -10,16 +10,17 @@
   "appTargetText":"L'objectif est de tester l'acces Rest en Get Put Post Del avec l'authentification Rest. et le support i18n",
   "appTitle":"App. Rest Angular",
   "getSimpleText":"Faire un Get mono-enregistrement vers un Rest publique.",
-  "home": "Acceuil",
+  "home": "Accueil",
   "getSimple": "Get simple Rest",
   "getMulti": "Get multi-element Rest",
   "Settings": "Paramètrage",
   "tesfriRD":"Tesfri R&D",
   "content":"contenue",
   "crudWcf":"CRUD via WCF",
-  "employeesList":"Liste des employés",
-  "name":"Nom",
-  "lastName":"Prénom",
-  "lastDateModif":"Derniére modification",
-  "crudWcfTitle":"CRUD complet connecté à un service WCF maison"
+  "personsList": "Liste des personnes",
+  "firstname": "Prénom",
+  "lastName": "Nom",
+  "modifiedDate": "Date de modification",
+  "crudWcfTitle": "CRUD complet connecté à un service WCF maison",
+  "action": ""
 }

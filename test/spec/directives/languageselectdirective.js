@@ -3,7 +3,7 @@
 describe('Directive: languageSelectDirective', function () {
 
   // load the directive's module
-  beforeEach(module('anguarRestApp'));
+  beforeEach(module('angularRestApp'));
 
   var element,
     scope;

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name anguarRestApp.LocaleService
+ * @name angularRestApp.LocaleService
  * @description
  * # LocaleService
- * Service in the anguarRestApp.
+ * Service in the angularRestApp.
  */
-angular.module('anguarRestApp')
+angular.module('angularRestApp')
   .service('LocaleService', function ($translate, LOCALES, $rootScope, tmhDynamicLocale) {
     'use strict';
     // PREPARING LOCALES INFO

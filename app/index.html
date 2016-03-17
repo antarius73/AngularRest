@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="anguarRestApp">
+  <body ng-app="angularRestApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -44,7 +44,7 @@
               <li class="active"><a href="#/">{{"home"|translate}}</a></li>
               <li><a ng-href="#/getsimple">{{"getSimple"|translate}}</a></li>
               <li><a ng-href="#/getmultiple">{{"getMulti"|translate}}</a></li>
-              <li><a ng-href="#/crudWcf">{{"crudWcf"|translate}}</a></li>
+              <li><a ng-href="#/persons">{{"crudWcf"|translate}}</a></li>
               <li><a ng-href="#/userConfig">{{"Settings"|translate}}</a></li>
             </ul>
           </div>
@@ -116,9 +116,9 @@
         <script src="scripts/services/localeservice.js"></script>
         <script src="scripts/directives/languageselectdirective.js"></script>
         <script src="scripts/controllers/userconfig.js"></script>
-        <script src="scripts/controllers/crudwcf.js"></script>
-        <script src="scripts/controllers/employeedetail.js"></script>
-        <script src="scripts/services/employeeservice.js"></script>
+    <script src="scripts/controllers/persons.js"></script>
+    <script src="scripts/controllers/person.js"></script>
+    <script src="scripts/services/personservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

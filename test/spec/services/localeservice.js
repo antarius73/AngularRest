@@ -3,7 +3,7 @@
 describe('Service: LocaleService', function () {
 
   // load the service's module
-  beforeEach(module('anguarRestApp'));
+  beforeEach(module('angularRestApp'));
 
   // instantiate service
   var LocaleService;

@@ -3,7 +3,7 @@
 describe('Controller: GetsimpleCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('anguarRestApp'));
+  beforeEach(module('angularRestApp'));
 
   var GetsimpleCtrl,
     scope;

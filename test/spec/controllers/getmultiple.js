@@ -3,7 +3,7 @@
 describe('Controller: GetmultipleCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('anguarRestApp'));
+  beforeEach(module('angularRestApp'));
 
   var GetmultipleCtrl,
     scope;

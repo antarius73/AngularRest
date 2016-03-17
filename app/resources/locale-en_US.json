@@ -18,8 +18,9 @@
   "content":"Contant",
   "crudWcf":"CRUD with WCF",
   "crudWcfTitle":"Full CRUD connected to a house made WCF service",
-  "employeesList":"Employees list",
-  "name":"Name",
+  "personsList": "Persons list",
+  "firstname": "First Name",
   "lastName":"Last name",
-  "lastDateModif":"Last modification",
+  "modifiedDate": "Last modification",
+  "action": ""
 }
