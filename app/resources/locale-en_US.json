@@ -22,5 +22,15 @@
   "firstname": "First Name",
   "lastName":"Last name",
   "modifiedDate": "Last modification",
-  "action": ""
+  "action": "Action",
+  "returnToList":"return to the list",
+  "type":"Type",
+  "typeLabel": {
+    "SC": "Store contact",
+    "IN": "Individual customer",
+    "SP": "Sale person",
+    "EM": "Employee",
+    "VC": "Vendor contact",
+    "GC": "General contact"
+  }
 }
