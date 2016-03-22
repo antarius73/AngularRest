@@ -24,7 +24,10 @@
   "crudWcfTitle": "CRUD complet connecté à un service WCF maison",
   "action": "action",
   "returnToList":"retourner sur la liste",
+  "loadData":"Charger les données",
   "type": "Type",
+  "editPersonTitle":"Modifier une personne",
+  "save":"Enregistrer",
   "typeLabel": {
     "SC": "Contact en magasin",
     "IN": "Consomateur final",
@@ -32,5 +35,8 @@
     "EM": "Employé",
     "VC": "Vendeur partenaire",
     "GC": "Contact divers"
+  },
+  "errorMessages":{
+    "dataServerConnexionError":"Erreur de connection avec le serveur de données"
   }
 }

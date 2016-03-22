@@ -1,0 +1,46 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><h4>{{"editPersonTitle"|translate}}</h4></div>
+  <div class="panel-body">
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="firstnameInput" class="col-sm-3 control-label">{{"firstname"|translate}} </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="firstnameInput" placeholder='{{"firstname"|translate}}' value="{{person.FirstName}}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastNameInput" class="col-sm-3 control-label">{{"lastName"|translate}} </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="lastNameInput" placeholder='{{"lastName"|translate}}'  value="{{person.LastName}}"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">{{"modifiedDate"|translate}} </label>
+    <div class="col-sm-9">
+      <p class="input-group">
+        <input type="text" class="form-control" ng-model='modifiedDateUI' uib-datepicker-popup="{{format}}" is-open="isDatePickerOpen"/>
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i class="glyphicon glyphicon-calendar"></i> </button>
+        </span>
+      </p>
+
+    </div>
+</div>
+
+  <div class="panel-footer">
+    <a href="#/persons/" class="btn btn-default" role="button">{{"returnToList"|translate}}</a>
+    <button type="submit" class="btn btn-primary">{{"save"|translate}}</button>
+  </div>
+
+</form>
+
+</div>
+  </div>
+
+
+
+
