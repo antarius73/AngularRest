@@ -12,6 +12,8 @@ angular.module('angularRestApp')
 
     $scope.format = "MM/dd/yyyy";
 
+    $scope.AviableTypes = ["SC", "IN","SP","EM","VC","GC"];
+
     $scope.getPerson = function() {
       Person.get({id: $routeParams.id}).$promise.then(function (person) {
         $scope.person = person;
@@ -22,6 +24,12 @@ angular.module('angularRestApp')
     }
 
     $scope.getPerson();
+
+
+    $scope.setType = function(type){
+      $scope.person.TypeString = type;
+    }
+
 
     $scope.openDatePicker = function(){
       $scope.isDatePickerOpen =true;
