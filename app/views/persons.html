@@ -1,11 +1,13 @@
 
 <h2>{{"crudWcfTitle"|translate}}</h2>
-<div><a ladda="dataLoadedSpinner" ng-click="searchData()" class="btn btn-primary ladda-button" data-style="expand-left">{{"loadData"|translate}}</a></div>
+<div><a ladda="dataLoadedSpinner" ng-click="searchData()" class="btn btn-primary ladda-button" data-style="expand-left">{{"loadData"|translate}}</a>
+  <a class="btn btn-primary" href="/#/personCreate/">{{"create"|translate}}</a></div>
 
 <div id="alert" ng-show="showError" class="alert alert-danger fade in">
   <a class="close" aria-label="close" ng-click="showError =!showError">&times;</a>
    {{errorMessage|translate}}
 </div>
+
 
 <div ng-show="dataLoaded" >
 <table datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs" class="table table-striped table-hover table-bordered">
