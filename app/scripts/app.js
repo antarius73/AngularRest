@@ -44,9 +44,14 @@ angular
   .config(function (tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
   })
-  .run(dtLanguageConfig)
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginController',
+        hideMenus: true
+      })
+
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
@@ -85,7 +90,22 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .run(dtLanguageConfig)
+  .run(['$rootScope', '$location', '$cookieStore', '$http',
+    function ($rootScope, $location, $cookieStore, $http) {
+      // keep user logged in after page refresh
+      $rootScope.globals = $cookieStore.get('globals') || {};
+      if ($rootScope.globals.currentUser) {
+        $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+      }
+      $rootScope.$on('$locationChangeStart', function (event, next, current) {
+        // redirect to login page if not logged in
+        if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+          $location.path('/login');
+        }
+      });
+    }]);
 
 function dtLanguageConfig(DTDefaultOptions,$rootScope) {
   $rootScope.Userlanguage = "fr_FR";
