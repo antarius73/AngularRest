@@ -16,8 +16,9 @@ angular
     'ngSanitize',
     'datatables',// table de données HTMl avancée
     'pascalprecht.translate',// angular-translate
-    'tmh.dynamicLocale'// angular-dynamic-locale
-
+    'tmh.dynamicLocale',// angular-dynamic-locale
+    'angular-ladda', // btn avec loading integré
+    'ui.bootstrap'
   ])
   .constant('LOCALES', {
     'locales': {
@@ -86,6 +87,11 @@ angular
         templateUrl: 'views/person.html',
         controller: 'PersonController',
         controllerAs: 'person'
+      })
+      .when('/personForm/:id', {
+        templateUrl: 'views/personform.html',
+        controller: 'PersonformCtrl',
+        controllerAs: 'personForm'
       })
       .otherwise({
         redirectTo: '/'

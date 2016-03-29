@@ -81,3 +81,13 @@ body {
     border-bottom: 0;
   }
 }
+
+/* class ajouté à la main */
+
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+}

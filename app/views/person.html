@@ -1,7 +1,23 @@
-<div>
-
-  {{"id"|translate}} : {{person.Id}}
-  {{"name"|translate}} : {{person.Title}}{{person.FirstName}}
-
+<div class="panel panel-primary">
+  <div class="panel-heading"><h4>{{person.Title}}&nbsp;{{person.LastName}}</h4></div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <li class="list-group-item"><strong>{{"firstname"|translate}} :</strong> {{person.FirstName}}</li>
+      <li class="list-group-item"><strong>{{"type"|translate}} :</strong> {{("typeLabel."+person.TypeString)|translate}}
+      </li>
+      <li class="list-group-item"><strong>{{"id"|translate}} :</strong> {{person.Id}}</li>
+      <li class="list-group-item"><strong>{{"modifiedDate"|translate}} :</strong>
+        {{person.ModifiedDateString|date:"MM/dd/yyyy"}}
+      </li>
+    </ul>
+  </div>
+  <div class="panel-footer">
+    <a href="#/persons/" class="btn btn-primary" role="button">{{"returnToList"|translate}}</a>
+  </div>
 </div>
+
+
+
+
+
 

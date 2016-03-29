@@ -1,0 +1,82 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><h4>{{"editPersonTitle"|translate}}</h4></div>
+  <div class="panel-body">
+
+    <form class="form-horizontal" name="personForm" novalidate>
+
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">{{"type"|translate}} </label>
+        <div class="col-sm-9">
+          <div class="btn-group" uib-dropdown keyboard-nav>
+            <button id="btntypePerson" type="button" class="btn btn-primary col-sm-12" uib-dropdown-toggle>
+              {{person.TypeString}} - {{"typeLabel."+person.TypeString|translate}} <span class="caret"></span>
+            </button>
+            <ul uib-dropdown-menu role="menu" aria-labelledby="btntypePerson">
+
+              <li ng-repeat="type in AviableTypes" role="menuitem"><a href="" ng-click="setType(type)">{{type}}&nbsp;-&nbsp;{{"typeLabel."+type|translate}}</a>
+              </li>
+
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-group" ng-class="{ 'has-error': personForm.firstname.$invalid && personForm.firstname.$dirty }">
+        <label for="firstnameInput" class="col-sm-3 control-label">{{"firstname"|translate}} </label>
+        <div class="col-sm-9">
+          <input type="text" name="firstname" class="form-control"
+                 ng-model="person.FirstName" id="firstnameInput"
+                 placeholder='{{"firstname"|translate}}' ng-change="resetUnique()" required person-name-unique/>
+          <p class="help-block" ng-if="personForm.firstname.$error.required">{{"firstNameRequired"|translate}}</p>
+          <p class="help-block" ng-show="personForm.firstname.$error.unique && !personForm.firstname.$error.required">
+            {{"firstNameTaken"|translate}}</p>
+
+        </div>
+      </div>
+
+      <div class="form-group" ng-class="{ 'has-error': personForm.lastName.$invalid && personForm.lastName.$dirty }">
+        <label for="lastNameInput" class="col-sm-3 control-label">{{"lastName"|translate}} </label>
+        <div class="col-sm-9">
+          <input type="text" name="lastName" class="form-control" ng-model="person.LastName"
+                 id="lastNameInput" placeholder='{{"lastName"|translate}}'
+                 required minlength="6"/>
+          <p class="help-block" ng-if="personForm.lastName.$error.required">{{"lastNameRequired"|translate}}</p>
+          <p class="help-block" ng-if="personForm.lastName.$error.minlength">{{"lastNameMinSize"|translate}}</p>
+        </div>
+      </div>
+
+      <div class="form-group" ng-class="{ 'has-error': personForm.dateModif.$invalid && personForm.dateModif.$dirty }">
+        <label class="col-sm-3 control-label">{{"modifiedDate"|translate}} </label>
+        <div class="col-sm-9">
+          <p class="input-group">
+            <input type="text" name="dateModif" class="form-control" ng-model='person.modifiedDateUI'
+                   uib-datepicker-popup="{{format}}" is-open="isDatePickerOpen" required/>
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="openDatePicker()"><i
+            class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+          </p>
+          <p class="help-block" ng-if="personForm.dateModif.$error.required">{{"ModifiedDateRequired"|translate}}</p>
+          <p class="help-block" ng-if="personForm.dateModif.$error.date">{{"InvalidDate"|translate}}</p>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <a href="#/persons/" class="btn btn-default" role="button">{{"returnToList"|translate}}</a>
+        <button type="submit" class="btn btn-primary" ng-disabled="personForm.$invalid" ng-click="update(person)">
+          {{"save"|translate}}
+        </button>
+        <button class="btn btn-default" ng-click="reset()">{{"reset"|translate}}</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+
