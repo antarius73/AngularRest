@@ -8,7 +8,7 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons, Person) {
+  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons, Person, $location) {
 
     $scope.persons = [];
     $scope.dataLoaded = false;
@@ -21,7 +21,7 @@ angular.module('angularRestApp')
       $scope.dataLoadedSpinner = true;
 
       Persons.query().$promise.then(function (persons) {
-        $scope.persons = persons.slice(0, 200);
+        $scope.persons = persons.slice(Math.max(persons.length-200,1));
         $scope.dataLoaded = true;
         $scope.dataLoadedSpinner = false;
         $rootScope.existingPersonnsData = true;
@@ -38,8 +38,10 @@ angular.module('angularRestApp')
     if ($rootScope.existingPersonnsData) $scope.searchData();
 
 
-    $scope.deletePerson = function (id) {
-      Person.delete({id: id});
+    $scope.deletePerson = function (id,index) {
+      console.log("index:"+index);
+      Person.remove({id: id});
+      $scope.persons.splice(index,1);
     };
 
 

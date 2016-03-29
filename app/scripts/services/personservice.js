@@ -21,7 +21,8 @@ angular.module('angularRestApp')
       return $resource('https://svr-grind.tesfri.intra:8081/Persons/:id/', {id: '@id'},
 
         {
-          'update': {method: 'PUT', interceptor: interceptor}
+          'update': {method: 'PUT', interceptor: interceptor},
+          'remove': {method: 'DELETE', interceptor: interceptor}
         }
       );
     }

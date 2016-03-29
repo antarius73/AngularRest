@@ -8,7 +8,7 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('PersoncreateCtrl', function ($scope, Person, $filter) {
+  .controller('PersoncreateCtrl', function ($scope, Person, $filter, $location) {
 
     $scope.format = "MM/dd/yyyy";
     $scope.formTitle = "createPersonTitle";
@@ -17,6 +17,7 @@ angular.module('angularRestApp')
 
     $scope.person = new Person();
     // utilisation d'une variable tmp pour la gestion visuel de la date
+
     $scope.person.modifiedDateUI = new Date($filter('date')(new Date(), "MM/dd/yyyy"));
     $scope.person.TypeString = $scope.AviableTypes[0];
 
@@ -26,12 +27,14 @@ angular.module('angularRestApp')
 
     $scope.update = function(user) {
 
+      user.ModifiedDateString = new Date( $filter('date')($scope.person.modifiedDateUI,"MM/dd/yyyy")) ;
+
+
       $scope.showErrorsCheckValidity = true;
 
 
       // reconversion de la date dans le format REST
-      user.ModifiedDateString = new Date( $filter('date')($scope.person.modifiedDateUI,"MM/dd/yyyy")) ;
-      user.$save().then(function () {
+      user.$save().then(function (thing) {
         console.log("retour");
         $location.path('/persons');
       });
