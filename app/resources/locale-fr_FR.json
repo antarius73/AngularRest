@@ -23,19 +23,21 @@
   "modifiedDate": "Date de modification",
   "crudWcfTitle": "CRUD complet connecté à un service WCF maison",
   "action": "action",
-  "returnToList": "retourner sur la liste",
-  "loadData": "Charger les données",
+  "returnToList":"retourner sur la liste",
+  "loadData":"Charger les données",
   "type": "Type",
-  "editPersonTitle": "Modifier une personne",
-  "save": "Enregistrer",
-  "reset": "Annuler",
-  "firstNameRequired": "Le prénom est obligatoire",
-  "checkNameAviability": "Verification de la disponibilité du nom...",
-  "firstNameTaken": "Ce prénom n'est pas disponible",
-  "lastNameRequired": "Le nom est obligatoire",
-  "lastNameMinSize": "Le nome doit faire au moins 6 caractères",
-  "ModifiedDateRequired": "La date de modification est obligatoire",
-  "InvalidDate": "La date n'est pas valide",
+  "editPersonTitle":"Modifier une personne",
+  "createPersonTitle":"Créer une personne",
+  "save":"Enregistrer",
+  "reset":"Annuler",
+  "create":"Créer",
+  "firstNameRequired":"Le prénom est obligatoire",
+  "checkNameAviability":"Verification de la disponibilité du nom...",
+  "firstNameTaken":"Ce prénom n'est pas disponible",
+  "lastNameRequired":"Le nom est obligatoire",
+  "lastNameMinSize":"Le nome doit faire au moins 6 caractères",
+  "ModifiedDateRequired":"La date de modification est obligatoire",
+  "InvalidDate":"La date n'est pas valide",
   "typeLabel": {
     "SC": "Contact en magasin",
     "IN": "Consomateur final",
@@ -44,7 +46,7 @@
     "VC": "Vendeur partenaire",
     "GC": "Contact divers"
   },
-  "errorMessages": {
-    "dataServerConnexionError": "Erreur de connection avec le serveur de données"
+  "errorMessages":{
+    "dataServerConnexionError":"Erreur de connection avec le serveur de données"
   }
 }

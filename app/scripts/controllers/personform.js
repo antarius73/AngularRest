@@ -11,6 +11,7 @@ angular.module('angularRestApp')
   .controller('PersonformCtrl', function ($scope, Person, $routeParams, $filter, $location) {
 
     $scope.format = "MM/dd/yyyy";
+    $scope.formTitle = "editPersonTitle";
 
     $scope.AviableTypes = ["SC", "IN", "SP", "EM", "VC", "GC"];
 

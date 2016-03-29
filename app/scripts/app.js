@@ -93,6 +93,11 @@ angular
         controller: 'PersonformCtrl',
         controllerAs: 'personForm'
       })
+      .when('/personCreate', {
+        templateUrl: 'views/personform.html',
+        controller: 'PersoncreateCtrl',
+        controllerAs: 'personCreate'
+      })
       .otherwise({
         redirectTo: '/'
       });

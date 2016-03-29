@@ -23,19 +23,21 @@
   "lastName":"Last name",
   "modifiedDate": "Last modification",
   "action": "Action",
-  "returnToList": "return to the list",
-  "loadData": "Load data",
-  "type": "Type",
-  "editPersonTitle": "Edit a person",
-  "save": "Save",
-  "reset": "Reset",
-  "firstNameRequired": "The user's firstname is required",
-  "checkNameAviability": "Checking if this name is aviable...",
-  "firstNameTaken": "This name is already taken",
-  "lastNameRequired": "The user's lastname is required",
-  "lastNameMinSize": "The user's lastname has 6 chars minimum",
-  "ModifiedDateRequired": "The user's modification date is required",
-  "InvalidDate": "Not a valid date",
+  "returnToList":"return to the list",
+  "loadData":"Load data",
+  "type":"Type",
+  "editPersonTitle":"Edit a person",
+  "createPersonTitle":"Create a person",
+  "save":"Save",
+  "reset":"Reset",
+  "create":"Create",
+  "firstNameRequired":"The user's firstname is required",
+  "checkNameAviability":"Checking if this name is aviable...",
+  "firstNameTaken":"This name is already taken",
+  "lastNameRequired":"The user's lastname is required",
+  "lastNameMinSize":"The user's lastname has 6 chars minimum",
+  "ModifiedDateRequired":"The user's modification date is required",
+  "InvalidDate":"Not a valid date",
   "typeLabel": {
     "SC": "Store contact",
     "IN": "Individual customer",
@@ -44,7 +46,7 @@
     "VC": "Vendor contact",
     "GC": "General contact"
   },
-  "errorMessages": {
-    "dataServerConnexionError": "Data server connexion error"
+  "errorMessages":{
+    "dataServerConnexionError":"Data server connexion error"
   }
 }
