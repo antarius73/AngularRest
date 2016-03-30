@@ -17,7 +17,7 @@ describe('Controller: ConfirmdeletepersonCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(ConfirmdeletepersonCtrl.awesomeThings.length).toBe(3);
-  });
+  //it('should attach a list of awesomeThings to the scope', function () {
+   // expect(ConfirmdeletepersonCtrl.awesomeThings.length).toBe(3);
+  //});
 });

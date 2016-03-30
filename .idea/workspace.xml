@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83fbdbf1-9565-47de-92b0-663a352e39df" name="Default" comment="Passage sous le nouveau rest avec ;&#10; - Reonommage de EMployee en Person&#10; - Modification des adresses REST sur la nouvelle écriture&#10; - Promise sur toutes les requêtes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/resources/locale-en_US.json" afterPath="$PROJECT_DIR$/app/resources/locale-en_US.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/resources/locale-fr_FR.json" afterPath="$PROJECT_DIR$/app/resources/locale-fr_FR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/personform.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/personform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/persons.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/persons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/person.html" afterPath="$PROJECT_DIR$/app/views/person.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/persons.html" afterPath="$PROJECT_DIR$/app/views/persons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/spec/controllers/confirmdeleteperson.js" afterPath="$PROJECT_DIR$/test/spec/controllers/confirmdeleteperson.js" />
     </list>
     <ignored path="AnguarRest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +34,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persons.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="persons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/persons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2836134">
-              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/karma.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirmdeleteperson.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/spec/controllers/confirmdeleteperson.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5672269">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,26 +121,6 @@
               <folding>
                 <marker date="1459326275000" expanded="true" signature="1643:1651" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="person.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/person.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="72" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="person.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/person.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
-              <caret line="4" column="97" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="97" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -190,6 +187,7 @@
         <option value="localhost:9000/scripts/controllers/confirmdeleteperson.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/confirmdeleteperson.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/persons.js" />
+        <option value="$PROJECT_DIR$/test/spec/controllers/confirmdeleteperson.js" />
       </list>
     </option>
   </component>
@@ -283,6 +281,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AngularRest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnguarRest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularRest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnguarRest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularRest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AnguarRest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularRest2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -630,18 +682,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/spec/controllers/person.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="http://localhost:9000/scripts/services/localeservice.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="http://localhost:9000/scripts/directives/languageselectdirective.js">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -984,8 +1024,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/persons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2836134">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/spec/controllers/confirmdeleteperson.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5672269">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
