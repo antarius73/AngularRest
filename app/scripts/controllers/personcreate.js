@@ -34,7 +34,7 @@ angular.module('angularRestApp')
 
 
       // reconversion de la date dans le format REST
-      user.$save().then(function (thing) {
+      user.$create().then(function (thing) {
         console.log("retour");
         $location.path('/persons');
       });

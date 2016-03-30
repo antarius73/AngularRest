@@ -22,7 +22,8 @@ angular.module('angularRestApp')
 
         {
           'update': {method: 'PUT', interceptor: interceptor},
-          'remove': {method: 'DELETE', interceptor: interceptor}
+          'create': {method: 'POST', interceptor: interceptor},
+          'remove': {method: 'DELETE'}
         }
       );
     }
