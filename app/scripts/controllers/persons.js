@@ -37,17 +37,11 @@ angular.module('angularRestApp')
 
     if ($rootScope.existingPersonnsData) $scope.searchData();
 
-
     $scope.deletePerson = function (id) {
       Person.delete({id: id});
     };
 
-
-
-
-
     $scope.dtOptions = DTOptionsBuilder.newOptions();
-
 
     $scope.dtColumnDefs = [
       DTColumnDefBuilder.newColumnDef(0),
@@ -58,7 +52,7 @@ angular.module('angularRestApp')
     ];
 
 
-    // fixe la langue de la grille à la volé
+    // fixe la langue de la grille à la volée
     $scope.dtOptions.withLanguageSource('resources/datatable-' + $rootScope.Userlanguage + '.json');
 
 

@@ -1,23 +1,23 @@
 'use strict';
 
-describe('Service: personService', function () {
+describe('Service: authenticationservice', function () {
 
   // load the service's module
   beforeEach(module('angularRestApp'));
 
   // instantiate service
-  var personService;
+  var login;
 
-  beforeEach(inject(function (Persons) {
-    personService = Persons;
+  beforeEach(inject(function (Login) {
+    login = Login;
   }));
 
   it('Should be defined', function () {
-    expect(personService).toBeDefined();
+    expect(login).toBeDefined();
   });
 
   it('Should return an array', function () {
-    var persons = personService.query();
+    var someone = login.query();
     expect(persons).toEqual(jasmine.any(Array));
     //expect(persons.length).toBe(20);
   });

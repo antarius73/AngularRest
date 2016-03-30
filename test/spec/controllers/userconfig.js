@@ -17,7 +17,7 @@ describe('Controller: UserconfigCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(UserconfigCtrl.awesomeThings.length).toBe(3);
-  });
+  //it('should attach a list of awesomeThings to the scope', function () {
+  //  expect(UserconfigCtrl.awesomeThings.length).toBe(3);
+  //});
 });

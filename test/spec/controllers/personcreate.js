@@ -17,7 +17,7 @@ describe('Controller: PersoncreateCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(PersoncreateCtrl.awesomeThings.length).toBe(3);
-  });
+  //it('should attach a list of awesomeThings to the scope', function () {
+  //  expect(PersoncreateCtrl.awesomeThings.length).toBe(3);
+  //});
 });
