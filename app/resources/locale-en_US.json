@@ -37,6 +37,8 @@
   "lastNameRequired":"The user's lastname is required",
   "lastNameMinSize":"The user's lastname has 6 chars minimum",
   "ModifiedDateRequired":"The user's modification date is required",
+  "DeleteConfirm":"Confirm Delete",
+  "DeletePersonMessage":"You are about to delete {{FirstName}} {{LastName}}",
   "InvalidDate":"Not a valid date",
   "typeLabel": {
     "SC": "Store contact",

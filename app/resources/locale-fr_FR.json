@@ -38,6 +38,8 @@
   "lastNameMinSize":"Le nome doit faire au moins 6 caractères",
   "ModifiedDateRequired":"La date de modification est obligatoire",
   "InvalidDate":"La date n'est pas valide",
+  "DeleteConfirm":"Confirmation de suppression",
+  "DeletePersonMessage":"Vous êtes sur le point de supprimer {{FirstName}} {{LastName}}",
   "typeLabel": {
     "SC": "Contact en magasin",
     "IN": "Consomateur final",

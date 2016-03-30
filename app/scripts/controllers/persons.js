@@ -8,7 +8,7 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons, Person, $location) {
+  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons, Person, $uibModal) {
 
     $scope.persons = [];
     $scope.dataLoaded = false;
@@ -21,7 +21,7 @@ angular.module('angularRestApp')
       $scope.dataLoadedSpinner = true;
 
       Persons.query().$promise.then(function (persons) {
-        $scope.persons = persons.slice(Math.max(persons.length-200,1));
+        $scope.persons = persons.slice(Math.max(persons.length - 200, 1));
         $scope.dataLoaded = true;
         $scope.dataLoadedSpinner = false;
         $rootScope.existingPersonnsData = true;
@@ -38,14 +38,34 @@ angular.module('angularRestApp')
     if ($rootScope.existingPersonnsData) $scope.searchData();
 
 
-    $scope.deletePerson = function (id,index) {
-      console.log("index:"+index);
-      Person.remove({id: id});
-      $scope.persons.splice(index,1);
+    $scope.deletePerson = function (id, index) {
+      $scope.delIndex = index;
+      $scope.delRscId = id;
+      $scope.ConfirmDeleteDialog(index);
     };
 
 
+    $scope.ConfirmDeleteDialog = function (index) {
+      var modalInstance = $uibModal.open({
+        animation: true,
+        templateUrl: 'views/confirmdialog.html',
+        controller: 'ConfirmdeletepersonCtrl',
+        size: 'lg',
+        scope: $scope
+      });
 
+      modalInstance.result.then(function () {
+          console.log("validate");
+          //console.log("index:"+index);
+          Person.remove({id: $scope.delRscId});
+          $scope.persons.splice($scope.delIndex, 1);
+
+        },
+        function () {
+          console.log("dismiss");
+        }
+      );
+    }
 
 
     $scope.dtOptions = DTOptionsBuilder.newOptions();
