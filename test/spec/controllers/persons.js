@@ -219,14 +219,14 @@ describe('Controller: PersonsController', function () {
     expect(controller).toBeDefined();
   });
 
-  //it('Should fetch all persons', function(){
-  //  //$httpBackend.expectGET('/Persons/');
-  //  var controller = createController();
-  //  //$httpBackend.flush();
-  //
-  //  expect($scope.persons).toEqual(jasmine.any(Array));
-  //  expect($scope.persons.length).toBe(20);
-  //  expect(angular.equals($scope.persons[1],{"FirstName":"Gigi46","Id":2,"LastName":"dsfsdfsf3","ModifiedDateString":"2002-02-23T00:00:00.0000000","Title":null,"TypeString":"VC"})).toBeTruthy();
-  //});
+  it('Should fetch all persons', function(){
+    //$httpBackend.expectGET('/Persons/');
+    //var controller = createController();
+    //$httpBackend.flush();
+    //
+    //expect($scope.persons).toEqual(jasmine.any(Array));
+    //expect($scope.persons.length).toBe(20);
+    //expect(angular.equals($scope.persons[1],{"FirstName":"Gigi46","Id":2,"LastName":"dsfsdfsf3","ModifiedDateString":"2002-02-23T00:00:00.0000000","Title":null,"TypeString":"VC"})).toBeTruthy();
+  });
 
 });

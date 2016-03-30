@@ -12,7 +12,7 @@ describe('Service: authenticationservice', function () {
     login = Login;
   }));
 
-  it('Should be defined', function () {
+  /*it('Should be defined', function () {
     expect(login).toBeDefined();
   });
 
@@ -20,5 +20,5 @@ describe('Service: authenticationservice', function () {
     var someone = login.query();
     expect(persons).toEqual(jasmine.any(Array));
     //expect(persons.length).toBe(20);
-  });
+  });*/
 });
