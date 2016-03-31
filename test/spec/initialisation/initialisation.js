@@ -3,14 +3,25 @@
  */
 var TestHttp = TestHttp || {};
 
-
 TestHttp.helpers = {
-   wcfRoot:function(){return 'https://svr-grind.tesfri.intra:8081'} ,
   initHttpBackend: function (httpBackend) {
-    var wcfRoot = TestHttp.helpers.wcfRoot();
+    var WCF_URL_BASE = 'https://svr-grind.tesfri.intra:8081';
+
+
+    // demande de creation d'une personne
+    httpBackend.when('POST', WCF_URL_BASE + '/Persons/').respond(
+      {
+        "FirstName": "Ken",
+        "Id": 234,
+        "LastName": "Ruffort",
+        "ModifiedDateString": "2016-03-15T11:44:33.1370000",
+        "Title": null,
+        "TypeString": "SC"
+      });
+
 
     httpBackend.when('GET', 'views/login.html').respond([]);
-    httpBackend.when('GET', wcfRoot + '/Persons/1/').respond(
+    httpBackend.when('GET', WCF_URL_BASE + '/Persons/1/').respond(
       {
         "FirstName": "Ken",
         "Id": 1,
@@ -19,7 +30,7 @@ TestHttp.helpers = {
         "Title": null,
         "TypeString": "SC"
       });
-    httpBackend.when('GET', wcfRoot + '/Persons/13/').respond(
+    httpBackend.when('GET', WCF_URL_BASE + '/Persons/13/').respond(
       {
         "FirstName": "Janice",
         "Id": 13,
@@ -28,7 +39,7 @@ TestHttp.helpers = {
         "Title": "Ms.",
         "TypeString": "EM"
       });
-    httpBackend.when('GET', wcfRoot + '/Persons/').respond([
+    httpBackend.when('GET', WCF_URL_BASE + '/Persons/').respond([
       {
         "FirstName": "Ken",
         "Id": 1,

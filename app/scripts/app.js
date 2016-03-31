@@ -27,6 +27,8 @@ angular
     },
     'preferredLocale': 'fr_FR'
   })
+  .constant('PERSON_TYPE',["SC", "IN","SP","EM","VC","GC"])
+  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8081')
   .config(['$resourceProvider', function ($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
     $resourceProvider.defaults.stripTrailingSlashes = false;
@@ -120,5 +122,5 @@ angular
 
 function dtLanguageConfig(DTDefaultOptions,$rootScope) {
   $rootScope.Userlanguage = "fr_FR";
-  DTDefaultOptions.setLanguageSource("resources/datatable-fr_FR.json");
+  //DTDefaultOptions.setLanguageSource("../resources/datatable-fr_FR.json");
 }

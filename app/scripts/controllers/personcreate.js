@@ -8,39 +8,43 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('PersoncreateCtrl', function ($scope, Person, $filter, $location) {
+  .controller('PersoncreateCtrl', function ($scope, Person, $filter, $location, PERSON_TYPE) {
 
-    $scope.format = "MM/dd/yyyy";
-    $scope.formTitle = "createPersonTitle";
+  // methodes
 
-    $scope.AviableTypes = ["SC", "IN","SP","EM","VC","GC"];
+    $scope.initUiData = function(){
+      $scope.UiDateformat = "dd/MM/yyyy";
+      $scope.restServiceDateFormat = "MM/dd/yyyy";
+      $scope.formTitle = "createPersonTitle";
+      $scope.AviableTypes = PERSON_TYPE;
+      $scope.isDatePickerOpen =false;
+      $scope.showErrorsCheckValidity = false;
+    }
 
-    $scope.person = new Person();
-    // utilisation d'une variable tmp pour la gestion visuel de la date
-
-    $scope.person.modifiedDateUI = new Date($filter('date')(new Date(), "MM/dd/yyyy"));
-    $scope.person.TypeString = $scope.AviableTypes[0];
+    $scope.initPerson = function(){
+      $scope.person = new Person();
+      // utilisation d'une variable tmp pour la gestion visuel de la date
+      $scope.person.modifiedDateUI = new Date();
+      $scope.person.TypeString = $scope.AviableTypes[0];
+    }
 
     $scope.openDatePicker = function(){
       $scope.isDatePickerOpen =true;
     };
 
     $scope.update = function(user) {
-
-      user.ModifiedDateString = new Date( $filter('date')($scope.person.modifiedDateUI,"MM/dd/yyyy")) ;
-
-
+      // reconversion de la date dans le format REST
+      user.ModifiedDateString = $filter('date')($scope.person.modifiedDateUI,$scope.restServiceDateFormat);
       $scope.showErrorsCheckValidity = true;
 
-
-      // reconversion de la date dans le format REST
       user.$create().then(function (thing) {
-        console.log("retour");
+        // retour sur la liste principale
         $location.path('/persons');
       });
-
-
-
     };
+
+    // initialisations du formulaire
+    $scope.initUiData();
+    $scope.initPerson();
 
   });

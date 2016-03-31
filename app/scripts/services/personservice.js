@@ -3,9 +3,9 @@
 angular.module('angularRestApp')
 
 
-  .factory('Person', ['$resource', '$cacheFactory',
+  .factory('Person', ['$resource', '$cacheFactory', 'WCF_URL_BASE',
 
-    function ($resource, $cacheFactory) {
+    function ($resource, $cacheFactory, WCF_URL_BASE) {
       // supprimer le cache de la liste des personne si une personne est modifiée
       var personsCache = $cacheFactory.get('persons');
 
@@ -18,7 +18,7 @@ angular.module('angularRestApp')
         }
       };
 
-      return $resource('https://svr-grind.tesfri.intra:8081/Persons/:id/', {id: '@id'},
+      return $resource(WCF_URL_BASE + '/Persons/:id/', {id: '@id'},
 
         {
           'update': {method: 'PUT', interceptor: interceptor},
@@ -30,12 +30,12 @@ angular.module('angularRestApp')
   ])
 
 
-  .factory('Persons', ['$resource', '$cacheFactory',
-    function ($resource, $cacheFactory) {
+  .factory('Persons', ['$resource', '$cacheFactory', 'WCF_URL_BASE',
+    function ($resource, $cacheFactory, WCF_URL_BASE) {
       var personsCache = $cacheFactory('persons');
 
 
-      return $resource('https://svr-grind.tesfri.intra:8081/Persons/',
+      return $resource(WCF_URL_BASE + '/Persons/',
         {},
         {
           'query': {method: 'GET', cache: personsCache, isArray: true}
