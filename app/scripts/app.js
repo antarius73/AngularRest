@@ -120,5 +120,5 @@ angular
 
 function dtLanguageConfig(DTDefaultOptions,$rootScope) {
   $rootScope.Userlanguage = "fr_FR";
-  //DTDefaultOptions.setLanguageSource("resources/datatable-fr_FR.json");
+  DTDefaultOptions.setLanguageSource("resources/datatable-fr_FR.json");
 }
