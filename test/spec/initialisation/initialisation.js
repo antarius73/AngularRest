@@ -17,6 +17,15 @@ TestHttp.helpers = {
         "Title": null,
         "TypeString": "SC"
       });
+    httpBackend.when('GET', WCF_URL_BASE + '/Persons/13/').respond(
+      {
+        "FirstName": "Janice",
+        "Id": 13,
+        "LastName": "Galvin",
+        "ModifiedDateString": "2005-01-16T00:00:00.0000000",
+        "Title": "Ms.",
+        "TypeString": "EM"
+      });
     httpBackend.when('GET', WCF_URL_BASE + '/Persons/').respond([
       {
         "FirstName": "Ken",
