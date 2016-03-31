@@ -3,9 +3,11 @@
  */
 var TestHttp = TestHttp || {};
 
+
 TestHttp.helpers = {
+   wcfRoot:function(){return 'https://svr-grind.tesfri.intra:8081'} ,
   initHttpBackend: function (httpBackend) {
-    var wcfRoot = 'https://svr-grind.tesfri.intra:8081';
+    var wcfRoot = TestHttp.helpers.wcfRoot();
 
     httpBackend.when('GET', 'views/login.html').respond([]);
     httpBackend.when('GET', wcfRoot + '/Persons/1/').respond(
@@ -16,6 +18,15 @@ TestHttp.helpers = {
         "ModifiedDateString": "2016-03-15T11:44:33.1370000",
         "Title": null,
         "TypeString": "SC"
+      });
+    httpBackend.when('GET', wcfRoot + '/Persons/13/').respond(
+      {
+        "FirstName": "Janice",
+        "Id": 13,
+        "LastName": "Galvin",
+        "ModifiedDateString": "2005-01-16T00:00:00.0000000",
+        "Title": "Ms.",
+        "TypeString": "EM"
       });
     httpBackend.when('GET', wcfRoot + '/Persons/').respond([
       {
