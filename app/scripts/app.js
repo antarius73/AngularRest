@@ -27,6 +27,7 @@ angular
     },
     'preferredLocale': 'fr_FR'
   })
+  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8081')
   .config(['$resourceProvider', function ($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
     $resourceProvider.defaults.stripTrailingSlashes = false;

@@ -5,10 +5,10 @@ var TestHttp = TestHttp || {};
 
 TestHttp.helpers = {
   initHttpBackend: function (httpBackend) {
-    var wcfRoot = 'https://svr-grind.tesfri.intra:8081';
+    var WCF_URL_BASE = 'https://svr-grind.tesfri.intra:8081';
 
     httpBackend.when('GET', 'views/login.html').respond([]);
-    httpBackend.when('GET', wcfRoot + '/Persons/1/').respond(
+    httpBackend.when('GET', WCF_URL_BASE + '/Persons/1/').respond(
       {
         "FirstName": "Ken",
         "Id": 1,
@@ -17,7 +17,7 @@ TestHttp.helpers = {
         "Title": null,
         "TypeString": "SC"
       });
-    httpBackend.when('GET', wcfRoot + '/Persons/').respond([
+    httpBackend.when('GET', WCF_URL_BASE + '/Persons/').respond([
       {
         "FirstName": "Ken",
         "Id": 1,
