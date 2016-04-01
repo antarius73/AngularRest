@@ -7,12 +7,15 @@ angular.module('angularRestApp')
 
     function ($resource, $cacheFactory, WCF_URL_BASE) {
       // supprimer le cache de la liste des personne si une personne est modifiée
-      var personsCache = $cacheFactory.get('persons');
 
       var interceptor = {
         response: function (response) {
-          if (typeof personsCache != 'undefined')
+
+          var personsCache = $cacheFactory.get('persons');
+
+          if (angular.isDefined(personsCache)){
             personsCache.removeAll();
+          }
 
           return response;
         }
@@ -30,19 +33,16 @@ angular.module('angularRestApp')
   ])
 
 
-  .factory('Persons', ['$resource', '$cacheFactory', 'WCF_URL_BASE',
+  .factory('Persons', ['$resource', '$cacheFactory', 'WCF_URL_BASE','Person',
     function ($resource, $cacheFactory, WCF_URL_BASE) {
       var personsCache = $cacheFactory('persons');
 
-
-      return $resource(WCF_URL_BASE + '/Persons/',
+      var factory=$resource(WCF_URL_BASE + '/Persons/',
         {},
         {
           'query': {method: 'GET', cache: personsCache, isArray: true}
-
-
         }
       );
+      return factory;
     }
-
   ]);

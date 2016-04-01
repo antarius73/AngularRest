@@ -8,7 +8,7 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('PersoncreateCtrl', function ($scope, Person, $filter, $location, PERSON_TYPE) {
+  .controller('PersoncreateCtrl', function ($scope, Person,Persons, $filter, $location, PERSON_TYPE) {
 
   // methodes
 
@@ -37,7 +37,7 @@ angular.module('angularRestApp')
       user.ModifiedDateString = $filter('date')($scope.person.modifiedDateUI,$scope.restServiceDateFormat);
       $scope.showErrorsCheckValidity = true;
 
-      user.$create().then(function (thing) {
+      user.$create().then(function () {
         // retour sur la liste principale
         $location.path('/persons');
       });

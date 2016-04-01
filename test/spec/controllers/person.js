@@ -7,27 +7,41 @@ describe('Controller: PersonController avec une personne défini', function () {
     $translateProvider.translations('fr_FR',{});
   }));
 
-  var PersonController, scope, mockBackend, WCF_URL_BASE;
+  var CreatePersonInfosController,
+    scope,
+    httpBackend,
+    WcfMock,
+    rootScope,
+    controllerService,
+    PersonServiceResource,
+    WCF_URL_BASE;
 
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope,_$httpBackend_, Person, _WCF_URL_BASE_) {
+  beforeEach(inject(function ($injector) {
 
-    mockBackend = TestHttp.helpers.initHttpBackend(_$httpBackend_);
-    scope = $rootScope.$new();
-    WCF_URL_BASE = _WCF_URL_BASE_;
+    httpBackend = $injector.get('$httpBackend');
+    httpBackend = TestHttp.helpers.initHttpBackend(httpBackend);
+    rootScope = $injector.get('$rootScope');
+    controllerService = $injector.get('$controller');
+    PersonServiceResource = $injector.get('Person');
+    WcfMock = $injector.get('WCF_URL_BASE');
 
-    PersonController = $controller('PersonController', {
-      $scope: scope,
-      $routeParams:{id:'13'},
-      person:Person
-    });
+    scope = rootScope.$new();
+
+    CreatePersonInfosController = function () {
+      return controllerService('PersonController', {
+        $scope: scope,
+        $routeParams:{id:'13'},
+        person:PersonServiceResource
+      })
+    };
   }));
 
   it("vérifier le nom d'une personne existante", function () {
-
-    mockBackend.expectGET(WCF_URL_BASE+'/Persons/13/');
-    mockBackend.flush();
+    CreatePersonInfosController();
+    httpBackend.expectGET(WcfMock+'/Persons/13/');
+    httpBackend.flush();
     expect(scope.person.FirstName).toBe('Janice');
   });
 });
@@ -39,26 +53,41 @@ describe('Controller: PersonController avec une personne indéfini', function ()
     $translateProvider.translations('fr_FR',{});
   }));
 
-  var PersonController, scope, mockBackend, WCF_URL_BASE;
+  var CreatePersonInfosController,
+    scope,
+    httpBackend,
+    WcfMock,
+    rootScope,
+    controllerService,
+    PersonServiceResource,
+    WCF_URL_BASE;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope,_$httpBackend_, Person, _WCF_URL_BASE_) {
+  beforeEach(inject(function ($injector) {
 
-    WCF_URL_BASE =_WCF_URL_BASE_;
-    mockBackend = _$httpBackend_;
-    scope = $rootScope.$new();
+    httpBackend = $injector.get('$httpBackend');
+    httpBackend = TestHttp.helpers.initHttpBackend(httpBackend);
+    rootScope = $injector.get('$rootScope');
+    controllerService = $injector.get('$controller');
+    PersonServiceResource = $injector.get('Person');
+    WcfMock = $injector.get('WCF_URL_BASE');
 
-    PersonController = $controller('PersonController', {
-      $scope: scope,
-      $routeParams:{id:'12343354'},
-      personHandler : mockBackend.whenGET(WCF_URL_BASE+'/Persons/12343354/').respond({}),
-      person:Person,
-    });
+    scope = rootScope.$new();
+
+    CreatePersonInfosController = function () {
+      return controllerService('PersonController', {
+        $scope: scope,
+        $routeParams:{id:'12343354'},
+        personHandler : httpBackend.whenGET(WcfMock+'/Persons/12343354/').respond({}),
+        person:PersonServiceResource,
+      })
+    };
   }));
 
   it('réponse à un Id de personne innexistante', function () {
-    mockBackend.expectGET(WCF_URL_BASE+'/Persons/12343354/');
-    mockBackend.flush();
+    CreatePersonInfosController();
+    httpBackend.expectGET(WcfMock+'/Persons/12343354/');
+    httpBackend.flush();
     expect(scope.person.FirstName).toBeUndefined();
   });
 

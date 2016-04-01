@@ -12,7 +12,8 @@ describe('Controller: PersoncreateCtrl', function () {
     httpBackend,
     personType,
     filter,
-    WcfMock;
+    WcfMock,
+    controllerService;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($injector, Person) {
@@ -26,10 +27,10 @@ describe('Controller: PersoncreateCtrl', function () {
     filter = $injector.get('$filter');
     scope = rootScope.$new();
 
-    var $controller = $injector.get('$controller');
+    controllerService = $injector.get('$controller');
 
     createController = function () {
-      return $controller('PersoncreateCtrl', {
+      return controllerService('PersoncreateCtrl', {
         $scope: scope,
         Person: Person
       })
