@@ -13,16 +13,18 @@ describe('Controller: PersoncreateCtrl', function () {
     personType,
     filter,
     WcfMock,
+    PersonServiceResource,
     controllerService;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($injector, Person) {
+  beforeEach(inject(function ($injector) {
 
     httpBackend = $injector.get('$httpBackend');
     httpBackend = TestHttp.helpers.initHttpBackend(httpBackend);
     rootScope = $injector.get('$rootScope');
     WcfMock = $injector.get('WCF_URL_BASE');
     personType = $injector.get('PERSON_TYPE');
+    PersonServiceResource = $injector.get('Person');
 
     filter = $injector.get('$filter');
     scope = rootScope.$new();
@@ -32,7 +34,7 @@ describe('Controller: PersoncreateCtrl', function () {
     createController = function () {
       return controllerService('PersoncreateCtrl', {
         $scope: scope,
-        Person: Person
+        Person: PersonServiceResource
       })
     };
   }));

@@ -10,12 +10,22 @@
 angular.module('angularRestApp')
   .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons, Person, $uibModal) {
 
-    $scope.persons = [];
-    $scope.dataLoaded = false;
-    $scope.dataLoadedSpinner = false;
-    $scope.showError = false;
+    // initialisation des données du ctrl
+    $scope.initPersons = function() {
+      $scope.persons = [];
+    }
 
+    // initialisation des données du ctrl utilisé par la vue
+    $scope.initUiData = function() {
+      // les données sont elle chargé
+      $scope.dataLoaded = false;
+      // si vrais affiche le picto de loading dans la vue
+      $scope.dataLoadedSpinner = false;
+      // si vrais affiche la zone de message d'erreur
+      $scope.showError = false;
+    }
 
+    // charge la liste des personnes
     $scope.searchData = function () {
       // start loading
       $scope.dataLoadedSpinner = true;
@@ -25,27 +35,28 @@ angular.module('angularRestApp')
         $scope.dataLoaded = true;
         $scope.dataLoadedSpinner = false;
         $rootScope.existingPersonnsData = true;
-      }, function (error) {
+      }, function () {
         $scope.showError = true;
         $scope.dataLoadedSpinner = false;
         $scope.errorMessage = "errorMessages.dataServerConnexionError";
-        // pour le moment pas possible de faire remonter le message angular
-
       });
 
     };
 
-    if ($rootScope.existingPersonnsData) $scope.searchData();
-
-
+    // supprimer une personne avec confirmation
     $scope.deletePerson = function (id, index) {
       $scope.delIndex = index;
       $scope.delRscId = id;
-      $scope.ConfirmDeleteDialog(index);
+      $scope.ConfirmDeleteDialog();
     };
 
+    $scope.sendDeletingOrder = function(){
+      Person.remove({id: $scope.delRscId});
+      $scope.persons.splice($scope.delIndex, 1);
+    };
 
-    $scope.ConfirmDeleteDialog = function (index) {
+    // demande de confirmation de la suppression d'un personne
+    $scope.ConfirmDeleteDialog = function () {
       var modalInstance = $uibModal.open({
         animation: true,
         templateUrl: 'views/confirmdialog.html',
@@ -55,33 +66,29 @@ angular.module('angularRestApp')
       });
 
       modalInstance.result.then(function () {
-          console.log("validate");
-          //console.log("index:"+index);
-          Person.remove({id: $scope.delRscId});
-          $scope.persons.splice($scope.delIndex, 1);
-
-        },
-        function () {
-          console.log("dismiss");
+          $scope.sendDeletingOrder();
         }
       );
     }
 
+    // initialisation de la grille de la vue
+    $scope.initGrid= function(){
+      $scope.dtOptions = DTOptionsBuilder.newOptions();
+      $scope.dtColumnDefs = [
+        DTColumnDefBuilder.newColumnDef(0),
+        DTColumnDefBuilder.newColumnDef(1),
+        DTColumnDefBuilder.newColumnDef(2),
+        DTColumnDefBuilder.newColumnDef(3),
+        DTColumnDefBuilder.newColumnDef(4)
+      ];
+      // fixe la langue de la grille à la volé
+      $scope.dtOptions.withLanguageSource('resources/datatable-' + $rootScope.Userlanguage + '.json');
+    }
 
-    $scope.dtOptions = DTOptionsBuilder.newOptions();
 
-
-    $scope.dtColumnDefs = [
-      DTColumnDefBuilder.newColumnDef(0),
-      DTColumnDefBuilder.newColumnDef(1),
-      DTColumnDefBuilder.newColumnDef(2),
-      DTColumnDefBuilder.newColumnDef(3),
-      DTColumnDefBuilder.newColumnDef(4)
-    ];
-
-
-    // fixe la langue de la grille à la volé
-    $scope.dtOptions.withLanguageSource('resources/datatable-' + $rootScope.Userlanguage + '.json');
-
+    $scope.initPersons();
+    $scope.initUiData();
+    $scope.initGrid();
+    if ($rootScope.existingPersonnsData) $scope.searchData();
 
   });

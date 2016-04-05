@@ -46,7 +46,7 @@ describe('Controller: PersonController avec une personne défini', function () {
   });
 });
 
-describe('Controller: PersonController avec une personne indéfini', function () {
+describe('Controller: PersonController avec une personne indéfinie', function () {
 
   // load the controller's module
   beforeEach(module('angularRestApp', function($translateProvider){
