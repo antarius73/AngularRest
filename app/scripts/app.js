@@ -28,7 +28,7 @@ angular
     'preferredLocale': 'fr_FR'
   })
   .constant('PERSON_TYPE',["SC", "IN","SP","EM","VC","GC"])
-  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8081')
+  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8080')
   .config(['$resourceProvider', function ($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
     $resourceProvider.defaults.stripTrailingSlashes = false;

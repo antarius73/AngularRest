@@ -17,6 +17,6 @@ angular.module('angularRestApp')
       }
 
     },function(error){
-      console.log("error:"+error);
+      console.log("error:"+error.status+ " "+error.statusText);
     });
   });
