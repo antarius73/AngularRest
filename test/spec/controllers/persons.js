@@ -116,10 +116,24 @@ describe('Controller: PersonsController', function () {
     expect(scope.errorMessage).toBe("errorMessages.dataServerConnexionError");
   });
 
-  it("affichage de la popup de confirmation lors de la suppression", function () {
+  it("passage des informations pour la suppression d'une personne", function () {
     createController();
-    scope.deletePerson(1,1);
-    // verifier les données
+    scope.deletePerson(5,4);
+    expect(scope.delIndex).toBe(4);
+    expect(scope.delRscId).toBe(5);
   });
 
+  it("envoi de la demande de suppression vers la base", function () {
+    createController();
+    scope.searchData();
+    httpBackend.flush();
+    var nbPersons = scope.persons.length;
+    scope.delIndex=4;
+    scope.delRscId=5;
+    scope.sendDeletingOrder();
+    httpBackend.expectDELETE(WcfMock+'/Persons/'+scope.delRscId+"/");
+    httpBackend.flush();
+    // verifier la suppretion dans le tab de la vue
+    expect(scope.persons.length).toBe(nbPersons-1);
+  });
 });

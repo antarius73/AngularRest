@@ -8,6 +8,9 @@ TestHttp.helpers = {
     var WCF_URL_BASE = 'https://svr-grind.tesfri.intra:8081';
 
 
+    httpBackend.when('DELETE', WCF_URL_BASE + '/Persons/5/').respond();
+
+
     // demande de creation d'une personne
     httpBackend.when('POST', WCF_URL_BASE + '/Persons/').respond(
       {
