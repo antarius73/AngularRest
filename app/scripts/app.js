@@ -28,7 +28,9 @@ angular
     'preferredLocale': 'fr_FR'
   })
   .constant('PERSON_TYPE',["SC", "IN","SP","EM","VC","GC"])
-  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8080')
+
+  .constant('WCF_URL_BASE', 'https://svr-grind:8080')
+
   .config(['$resourceProvider', function ($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
     $resourceProvider.defaults.stripTrailingSlashes = false;
@@ -114,7 +116,7 @@ angular
       }
       $rootScope.$on('$locationChangeStart', function (event, next, current) {
         // redirect to login page if not logged in
-        if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+        if ($location.path() !== '/login' && (!$rootScope.globals.currentUser)) {
           $location.path('/login');
         }
       });

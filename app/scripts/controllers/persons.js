@@ -8,12 +8,13 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope, Persons, Person, $uibModal) {
+  .controller('PersonsController', function ($resource, $scope, DTOptionsBuilder, DTColumnDefBuilder, $rootScope,
+                                             Persons, Person, AuthenticationService, $uibModal, $location) {
 
     // initialisation des données du ctrl
     $scope.initPersons = function() {
       $scope.persons = [];
-    }
+    };
 
     // initialisation des données du ctrl utilisé par la vue
     $scope.initUiData = function() {
@@ -23,7 +24,7 @@ angular.module('angularRestApp')
       $scope.dataLoadedSpinner = false;
       // si vrais affiche la zone de message d'erreur
       $scope.showError = false;
-    }
+    };
 
     // charge la liste des personnes
     $scope.searchData = function () {
@@ -35,7 +36,11 @@ angular.module('angularRestApp')
         $scope.dataLoaded = true;
         $scope.dataLoadedSpinner = false;
         $rootScope.existingPersonnsData = true;
-      }, function () {
+      }, function (error) {
+        if (error.status == "401") {
+          AuthenticationService.ClearCredentials();
+          $location.path('/');
+        }
         $scope.showError = true;
         $scope.dataLoadedSpinner = false;
         $scope.errorMessage = "errorMessages.dataServerConnexionError";
@@ -69,7 +74,7 @@ angular.module('angularRestApp')
           $scope.sendDeletingOrder();
         }
       );
-    }
+    };
 
     // initialisation de la grille de la vue
     $scope.initGrid= function(){
@@ -83,7 +88,7 @@ angular.module('angularRestApp')
       ];
       // fixe la langue de la grille à la volé
       $scope.dtOptions.withLanguageSource('resources/datatable-' + $rootScope.Userlanguage + '.json');
-    }
+    };
 
 
     $scope.initPersons();

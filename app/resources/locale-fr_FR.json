@@ -50,5 +50,7 @@
   },
   "errorMessages":{
     "dataServerConnexionError":"Erreur de connection avec le serveur de données"
-  }
+  },
+  "Logout": "Se déconnecter",
+  "Login": "Se connecter"
 }
