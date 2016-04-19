@@ -5,7 +5,7 @@ var TestHttp = TestHttp || {};
 
 TestHttp.helpers = {
   initHttpBackend: function (httpBackend) {
-    var WCF_URL_BASE = 'https://svr-grind.tesfri.intra:8081';
+    var WCF_URL_BASE = 'https://svr-grind.tesfri.intra:8080';
 
 
     httpBackend.when('DELETE', WCF_URL_BASE + '/Persons/5/').respond();
