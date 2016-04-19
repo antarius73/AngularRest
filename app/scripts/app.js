@@ -29,7 +29,7 @@ angular
   })
   .constant('PERSON_TYPE',["SC", "IN","SP","EM","VC","GC"])
 
-  .constant('WCF_URL_BASE', 'https://svr-grind:8080')
+  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8080')
 
   .config(['$resourceProvider', function ($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
