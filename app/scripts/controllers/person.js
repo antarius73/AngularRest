@@ -17,7 +17,7 @@ angular.module('angularRestApp')
       }
 
     },function(error){
-      if (error.status == "401") {
+      if (error.status === "401") {
         AuthenticationService.ClearCredentials();
         $location.path('/');
       }

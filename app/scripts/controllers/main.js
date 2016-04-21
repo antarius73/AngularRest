@@ -8,6 +8,6 @@
  * Controller of the angularRestApp
  */
 angular.module('angularRestApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function () {
 
   });

@@ -18,11 +18,11 @@ angular.module('angularRestApp')
 
     // initialisation des données du ctrl utilisé par la vue
     $scope.initUiData = function() {
-      // les données sont elle chargé
+      // les données sont elles chargées
       $scope.dataLoaded = false;
-      // si vrais affiche le picto de loading dans la vue
+      // si vrai affiche le picto de loading dans la vue
       $scope.dataLoadedSpinner = false;
-      // si vrais affiche la zone de message d'erreur
+      // si vrai affiche la zone de message d'erreur
       $scope.showError = false;
     };
 
@@ -37,7 +37,7 @@ angular.module('angularRestApp')
         $scope.dataLoadedSpinner = false;
         $rootScope.existingPersonnsData = true;
       }, function (error) {
-        if (error.status == "401") {
+        if (error.status === "401") {
           AuthenticationService.ClearCredentials();
           $location.path('/');
         }
@@ -94,6 +94,8 @@ angular.module('angularRestApp')
     $scope.initPersons();
     $scope.initUiData();
     $scope.initGrid();
-    if ($rootScope.existingPersonnsData) $scope.searchData();
+    if ($rootScope.existingPersonnsData) {
+      $scope.searchData();
+    }
 
   });

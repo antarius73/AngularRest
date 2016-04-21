@@ -19,14 +19,14 @@ angular.module('angularRestApp')
       $scope.AviableTypes = PERSON_TYPE;
       $scope.isDatePickerOpen =false;
       $scope.showErrorsCheckValidity = false;
-    }
+    };
 
     $scope.initPerson = function(){
       $scope.person = new Person();
       // utilisation d'une variable tmp pour la gestion visuel de la date
       $scope.person.modifiedDateUI = new Date();
       $scope.person.TypeString = $scope.AviableTypes[0];
-    }
+    };
 
     $scope.openDatePicker = function(){
       $scope.isDatePickerOpen =true;

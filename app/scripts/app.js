@@ -8,6 +8,12 @@
  *
  * Main module of the application.
  */
+
+function dtLanguageConfig(DTDefaultOptions, $rootScope) {
+  $rootScope.Userlanguage = "fr_FR";
+  //DTDefaultOptions.setLanguageSource("../resources/datatable-fr_FR.json");
+}
+
 angular
   .module('angularRestApp', [
     'ngCookies',
@@ -29,7 +35,7 @@ angular
   })
   .constant('PERSON_TYPE',["SC", "IN","SP","EM","VC","GC"])
 
-  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8080')
+  .constant('WCF_URL_BASE', 'https://svr-grind.tesfri.intra:8081')
 
   .config(['$resourceProvider', function ($resourceProvider) {
     // Don't strip trailing slashes from calculated URLs
@@ -114,7 +120,7 @@ angular
       if ($rootScope.globals.currentUser) {
         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
       }
-      $rootScope.$on('$locationChangeStart', function (event, next, current) {
+      $rootScope.$on('$locationChangeStart', function () {
         // redirect to login page if not logged in
         if ($location.path() !== '/login' && (!$rootScope.globals.currentUser)) {
           $location.path('/login');
@@ -122,7 +128,3 @@ angular
       });
     }]);
 
-function dtLanguageConfig(DTDefaultOptions,$rootScope) {
-  $rootScope.Userlanguage = "fr_FR";
-  //DTDefaultOptions.setLanguageSource("../resources/datatable-fr_FR.json");
-}

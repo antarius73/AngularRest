@@ -19,13 +19,13 @@ angular.module('angularRestApp')
             personsNames = persons;
             var preExistingName = $filter('filter')(personsNames, {FirstName: ctrl.$modelValue}, true);
 
-            if (preExistingName.length == 0 || ctrl.$modelValue == scope.person.originalFirstName) {
+            if (preExistingName.length === 0 || ctrl.$modelValue == scope.person.originalFirstName) {
               ctrl.$setValidity("unique", true);
             }
             else {
               ctrl.$setValidity("unique", false);
             }
-          }, function (error) {
+          }, function () {
 
           });
         });

@@ -23,10 +23,10 @@ angular.module('angularRestApp')
 
     $scope.validate= function(){
       $uibModalInstance.close();
-    }
+    };
     $scope.cancel= function(){
       $uibModalInstance.dismiss('cancel');
-    }
+    };
 
 
   });
