@@ -11,7 +11,7 @@ angular.module('angularRestApp')
 
         $scope.Logout = function () {
           AuthenticationService.ClearCredentials();
-          $location.path('/');
+          $location.path('/login');
         };
 
         $scope.isNotLogin = function () {

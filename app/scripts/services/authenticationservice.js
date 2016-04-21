@@ -23,9 +23,9 @@ angular.module('angularRestApp')
           /* Use this for real authentication
            ----------------------------------------------*/
           var person;
-          $http(req).then(function (data) {
-            person = data;
-            if (person !== null) {
+          $http(req).then(function (response) {
+            person = response.data;
+            if (person) {
               callback({success: true});
             } else {
               callback({success: false, message: 'Username or password is incorrect'});
