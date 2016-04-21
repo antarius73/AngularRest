@@ -55,6 +55,9 @@ angular
   .config(function (tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
   })
+  .config(['$httpProvider', function ($httpProvider) {
+    $httpProvider.defaults.timeout = 5000;
+  }])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/login', {

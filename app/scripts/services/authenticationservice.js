@@ -23,20 +23,20 @@ angular.module('angularRestApp')
           /* Use this for real authentication
            ----------------------------------------------*/
           var person;
-          $http(req).success(function (data) {
+          $http(req).then(function (data) {
             person = data;
             if (person !== null) {
               callback({success: true});
             } else {
               callback({success: false, message: 'Username or password is incorrect'});
             }
-          }).error(function (error) {
-            callback({success: false, message: 'Service call failed : ' + error.status});
+          }, function (error) {
+            var message = 'Service call failed';
+            if (!!error && !!error.statusText) message += ' ' + error.statusText;
+            if (!!error && !!error.status) message += ' ( ' + error.status + ')';
+
+            callback({success: false, message: message});
           });
-
-
-//          }, 1000);
-
         };
 
         service.SetCredentials = function (username, password) {
